@@ -20,6 +20,7 @@ header {
     background: url('./img/top.png');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 410rem;
     z-index: 100;
 }
 
@@ -36,6 +37,7 @@ nav {
     justify-content: space-between;
     height: 47px;
     margin-top: 40px;
+    z-index: 9999;
 }
 
 .nav {
@@ -55,6 +57,27 @@ nav {
     display: flex;
     justify-content: space-between;
     gap: 28rem;
+}
+
+.nav-list-1 {
+    width: 372rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 28rem;
+}
+
+.nav-list-1 a {
+    width: 52rem;
+    color: var(--ffffff, #FFF);
+    font-family: Noto Sans JP;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.nav-list-1 a:hover {
+    color: rgba(255, 255, 255, 0.50);
 }
 
 .nav-list a {
@@ -87,7 +110,22 @@ nav {
     font-family: Noto Sans JP;
     font-size: 13px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
+    line-height: normal;
+    border-radius: 8px;
+    background: var(--ffffff, #FFF);
+}
+
+.header-support-1 {
+    padding: 14rem 18rem;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--007-c-72, #007C72);
+    font-family: Noto Sans JP;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: bold;
     line-height: normal;
     border-radius: 8px;
     background: var(--ffffff, #FFF);
@@ -97,7 +135,28 @@ nav {
     background: rgba(255, 255, 255, 0.50);
 }
 
+.header-support-1:hover {
+    background: rgba(255, 255, 255, 0.50);
+}
+
 .header-ask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 14rem 18rem;
+    border-radius: 8px;
+    background: var(--02-a-69-b, #02A69B);
+    color: var(--ffffff, #FFF);
+    text-align: center;
+    font-family: Noto Sans JP;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.header-ask-1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,6 +180,13 @@ nav {
     box-shadow: 0px 4px 12px 0px rgba(2, 166, 155, 0.10);
 }
 
+.header-ask-1:hover {
+    background: rgba(2, 166, 155, 0.50);
+
+    /* Drop Shadow */
+    box-shadow: 0px 4px 12px 0px rgba(2, 166, 155, 0.10);
+}
+
 .login-top-text {
     padding-top: 164rem;
 }
@@ -131,17 +197,19 @@ nav {
     font-size: 44px;
     font-style: normal;
     font-weight: 600;
-    line-height: 100%; /* 44px */
+    line-height: 100%;
+    /* 44px */
     padding-left: 160rem;
 }
 
-.login-top-text h2 {
+.login-top-text .h2 {
     color: #FFF;
     font-family: Noto Sans JP;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
-    line-height: 150%; /* 30px */
+    line-height: 150%;
+    /* 30px */
     letter-spacing: 0.6px;
     padding-top: 9rem;
     padding-bottom: 164rem;
@@ -149,7 +217,6 @@ nav {
 }
 
 .bread {
-    position: relative;
     display: flex;
     justify-content: flex-start;
     width: 1120rem;
@@ -160,7 +227,7 @@ nav {
     gap: 10rem;
     margin: auto;
     margin-top: -44rem;
-    z-index: 200;
+    height: 88rem;
 }
 
 .bread h2 {
@@ -169,7 +236,12 @@ nav {
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 18px */
+    line-height: 150%;
+    /* 18px */
+}
+
+.bread img {
+    width: 7.38rem;
 }
 
 .bread h3 {
@@ -178,8 +250,48 @@ nav {
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 18px */
+    line-height: 150%;
+    /* 18px */
 }
+
+/* ---------side bar---------------- */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
 
 /* ===========main============== */
 

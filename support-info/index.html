@@ -11,37 +11,85 @@
     <header>
         <nav>
             <div class="navbar">
-                <div class="nav">
-                    <div class="logo">
-                        <img src="./img/logo.svg" alt="" />
-                    </div>
-                    <div class="nav-list">
-                        <a href="#">会社情報</a>
-                        <a href="#">事業内容</a>
-                        <a href="#">製品一覧</a>
-                        <a href="#">採用情報</a>
-                        <a href="#">ニュース</a>
-                    </div>
+              <div class="nav">
+                <div class="logo">
+                  <img src="./img/logo.svg" alt="" />
                 </div>
-                <div class="header-btn">
-                    <a class="header-support" href="#">ユーザーサポート</a>
-                    <a class="header-ask" href="#">お問い合わせ</a>
+                <div class="nav-list-1">
+                  <a href="#">会社情報</a>
+                  <a href="#">事業内容</a>
+                  <a href="#">製品一覧</a>
+                  <a href="#">採用情報</a>
+                  <a href="#">ニュース</a>
                 </div>
+                <!-- ============side============== -->
+                <div id="mySidenav" class="sidenav pt-0 pb-0">
+                  <div
+                    class="footer-second"
+                    style="height: 100%; padding-top: 121px"
+                  >
+                    <div class="navbar-1">
+                      <div class="nav-1 gap-1">
+                        <div class="nav-list list-size">
+                          <div class="list-size-div-1 div-list-1">
+                            <a href="#" class="color-white">会社情報</a>
+                            <hr class="footer-hr-1 w-366 pt-0 pb-0" />
+                          </div>
+                          <div class="list-size-div-1 div-list-1">
+                            <a href="#" class="color-white">事業内容</a>
+                            <hr class="footer-hr-1 w-366 pt-0 pb-0" />
+                          </div>
+                          <div class="list-size-div-1 div-list-1">
+                            <a href="#" class="color-white">製品一覧</a>
+                            <hr class="footer-hr-1 w-366 pt-0 pb-0" />
+                          </div>
+                          <div class="list-size-div-1 div-list-1">
+                            <a href="#" class="color-white">採用情報</a>
+                            <hr class="footer-hr-1 w-366 pt-0 pb-0" />
+                          </div>
+                          <div class="list-size-div-1 div-list-1">
+                            <a href="#" class="color-white">ニュース</a>
+                            <hr class="footer-hr-1 w-366 pt-0 pb-0" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="header-btn size-change">
+                        <a class="header-support-1 color-green size-edit" href="#"
+                          >ユーザーサポート</a
+                        >
+                        <a class="header-ask-1 color-white pl-40 size-edit" href="#"
+                          >お問い合わせ</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ==============end side============== -->
+              </div>
+              <div class="header-btn z-9999">
+                <a class="header-support" href="#">お問い合わせ</a>
+                <a class="header-ask" href="#">お問い合わせ</a>
+                <a
+                  class="burger"
+                  onclick="openNav()"
+                  onclick="this.classList.toggle('active');"
+                ></a>
+              </div>
             </div>
-        </nav>
-        <div class="login-top-text">
+          </nav>
+          <div class="login-top-text">
             <h1>SUPPORT INFO</h1>
-            <h2>サポートインフォ</h2>
-        </div>
+            <h2 class="h2">サポートインフォ</h2>
+            <div class="bread">
+                <h2>HOME</h2>
+                <img src="./img/bread.svg" alt="" />
+                <h2>ユーザーサポート</h2>
+                <img src="./img/bread.svg" alt="" />
+                <h3>サポートインフォ</h3>
+            </div>
+          </div>
     </header>
     <main>
-        <div class="bread">
-            <h2>HOME</h2>
-            <img src="./img/bread.svg" alt="" />
-            <h2>ユーザーサポート</h2>
-            <img src="./img/bread.svg" alt="" />
-            <h3>サポートインフォ</h3>
-        </div>
         <div class="view-all">
             <div class="all-view">
                 <div class="check">
@@ -174,12 +222,24 @@
                     </div>
                 </div>
                 <div class="header-btn size-change">
-                    <a class="header-support size-edit" href="#">ユーザーサポート</a>
-                    <a class="header-ask size-edit" href="#">お問い合わせ</a>
+                    <a class="header-support-1 size-edit" href="#">ユーザーサポート</a>
+                    <a class="header-ask-1 size-edit" href="#">お問い合わせ</a>
                 </div>
             </div>
             <p>Copyright © LOGICAL TECH All Rights Reserved.</p>
         </div>
     </footer>
 </body>
+<script>
+  var isOpened = false;
+  function openNav(e) {
+    document.getElementById("mySidenav").style.width = isOpened ? "0" : "100%";
+    isOpened = !isOpened;
+    console.log("isOpened:" , isOpened)
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+</script>
 </html>
